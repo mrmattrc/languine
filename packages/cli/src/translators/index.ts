@@ -2,6 +2,8 @@ import type { Translator } from "../types.js";
 import { javascript } from "./js.js";
 import { json } from "./json.js";
 import { markdown } from "./md.js";
+import { xcodeStrings } from "./xcode-strings.js";
+import { xcodeXCStrings } from "./xcode-xcstrings.js";
 
 /**
  * Get adapter from file extension/format
@@ -20,6 +22,10 @@ export async function getTranslator(
     case "md":
     case "mdx":
       return markdown;
+    case "xcode-strings":
+      return xcodeStrings;
+    case "xcode-xcstrings":
+      return xcodeXCStrings;
     default:
       return undefined;
   }

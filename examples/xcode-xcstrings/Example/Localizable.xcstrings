@@ -1,0 +1,83 @@
+{
+  "version": "1.0",
+  "sourceLanguage": "en",
+  "strings": {
+    "app_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aufgabenmanager Pro"
+          }
+        }
+      }
+    },
+    "task_due_date": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fällig: %@"
+          }
+        }
+      }
+    },
+    "task_count": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keine Aufgaben"
+          }
+        }
+      }
+    },
+    "reminder_time": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld Aufgabe"
+          }
+        }
+      }
+    },
+    "task_details": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld Aufgaben"
+          }
+        }
+      }
+    },
+    "last_modified": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld Aufgaben"
+          }
+        }
+      }
+    },
+    "task_description": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld Aufgaben"
+          }
+        }
+      }
+    }
+  }
+}
