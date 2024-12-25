@@ -41,6 +41,12 @@ function getDefaultPattern(format: string) {
       return "locales/[locale].json";
     case "md":
       return "docs/[locale]/*.md";
+    case ".po":
+      return "locales/[locale].po";
+    case "xml":
+      return "locales/[locale].xml";
+    case ".arb":
+      return "locales/[locale].arb";
     default:
       return `locales/[locale].${format}`;
   }
@@ -87,6 +93,9 @@ export async function init() {
       { value: "xcode-stringsdict", label: "Xcode Stringsdict (.stringsdict)" },
       { value: "xcode-xcstrings", label: "Xcode XCStrings (.xcstrings)" },
       { value: "yaml", label: "YAML (.yml)" },
+      { value: "xml", label: "XML (.xml)" },
+      { value: "arb", label: "Arb (.arb)" },
+      { value: "po", label: "Gettext (.po)" },
     ],
   })) as string;
 

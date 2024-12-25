@@ -181,8 +181,6 @@ export const xcodeXCStrings: Translator = {
       options.config.locale.source,
     );
 
-    console.log("katt");
-
     const sourceKeys = Object.keys(sourceStrings);
 
     const { object } = await generateObject({
