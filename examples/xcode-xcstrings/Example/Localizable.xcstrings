@@ -2,79 +2,79 @@
   "version": "1.0",
   "sourceLanguage": "en",
   "strings": {
-    "app_title": {
+    "welcome_message": {
       "extractionState": "manual",
       "localizations": {
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Aufgabenmanager Pro"
+            "value": "Willkommen bei der App"
           }
         }
       }
     },
-    "task_due_date": {
+    "user_greeting": {
       "extractionState": "manual",
       "localizations": {
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Fällig: %@"
+            "value": "Hallo %@"
           }
         }
       }
     },
-    "task_count": {
+    "items_count": {
       "extractionState": "manual",
       "localizations": {
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Keine Aufgaben"
+            "value": "Keine Einträge"
           }
         }
       }
     },
-    "reminder_time": {
+    "notification_time": {
       "extractionState": "manual",
       "localizations": {
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "%lld Aufgabe"
+            "value": "In %lld Minute"
           }
         }
       }
     },
-    "task_details": {
+    "item_details": {
       "extractionState": "manual",
       "localizations": {
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "%lld Aufgaben"
+            "value": "%lld Details anzeigen"
           }
         }
       }
     },
-    "last_modified": {
+    "modified_date": {
       "extractionState": "manual",
       "localizations": {
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "%lld Aufgaben"
+            "value": "Zuletzt geändert: %lld"
           }
         }
       }
     },
-    "task_description": {
+    "item_description": {
       "extractionState": "manual",
       "localizations": {
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "%lld Aufgaben"
+            "value": "Beschreibung: %lld"
           }
         }
       }

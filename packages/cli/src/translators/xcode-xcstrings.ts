@@ -1,6 +1,5 @@
 import { generateObject } from "ai";
 import dedent from "dedent";
-import { merge } from "rambda";
 import { z } from "zod";
 import { baseRequirements, createBasePrompt } from "../prompt.js";
 import type { PromptOptions, Translator } from "../types.js";
@@ -23,6 +22,8 @@ interface TranslationEntity {
 }
 
 interface XCStringsData {
+  version: string;
+  sourceLanguage: string;
   strings: Record<string, TranslationEntity>;
 }
 
@@ -66,7 +67,12 @@ function stringifyXcodeXCStrings(
   locale: string,
   originalContent: string,
 ) {
-  const langDataToMerge: XCStringsData = { strings: {} };
+  const originalData = JSON.parse(originalContent) as XCStringsData;
+  const langDataToMerge: XCStringsData = {
+    version: originalData.version,
+    sourceLanguage: originalData.sourceLanguage,
+    strings: {},
+  };
 
   for (const [key, value] of Object.entries(strings)) {
     if (typeof value === "string") {
@@ -106,7 +112,15 @@ function stringifyXcodeXCStrings(
     }
   }
 
-  const result = merge(JSON.parse(originalContent), langDataToMerge);
+  const result: XCStringsData = {
+    version: originalData.version,
+    sourceLanguage: originalData.sourceLanguage,
+    strings: {
+      ...originalData.strings,
+      ...langDataToMerge.strings,
+    },
+  };
+
   return JSON.stringify(result, null, 2);
 }
 
@@ -143,6 +157,7 @@ export const xcodeXCStrings: Translator = {
     const { object } = await generateObject({
       model: options.model,
       temperature: options.config.llm?.temperature ?? 0,
+      mode: "json",
       prompt: getPrompt(JSON.stringify(toTranslate, null, 2), options),
       schema: z.object({
         items: z.array(
@@ -187,6 +202,7 @@ export const xcodeXCStrings: Translator = {
       model: options.model,
       prompt: getPrompt(JSON.stringify(sourceStrings, null, 2), options),
       temperature: options.config.llm?.temperature ?? 0,
+      mode: "json",
       schema: z.object({
         items: z.array(
           z

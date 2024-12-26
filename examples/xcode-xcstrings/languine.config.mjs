@@ -2,7 +2,7 @@ export default {
   version: "0.6.2",
   locale: {
     source: "en",
-    targets: ["de"],
+    targets: ["de", "fr"],
   },
   files: {
     "xcode-xcstrings": {
@@ -13,4 +13,4 @@ export default {
     provider: "openai",
     model: "gpt-4-turbo",
   },
-}
+};
