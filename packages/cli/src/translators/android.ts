@@ -36,15 +36,21 @@ async function parseXmlFile(content: string): Promise<AndroidResources> {
       trim: true,
     })) as AndroidResources;
     return parsed;
-  } catch (error) {
-    console.error("Failed to parse Android XML:", error);
+  } catch {
     return { resources: {} };
   }
 }
 
 function stringifyXmlFile(data: AndroidResources): string {
   try {
-    const builder = new Builder({ headless: true });
+    const builder = new Builder({
+      headless: false,
+      xmldec: { version: "1.0", encoding: "utf-8" },
+      renderOpts: { pretty: true, indent: "    " },
+      // Preserve comments from source XML
+      rootName: "resources",
+      cdata: true,
+    });
     const xmlOutput = builder.buildObject(data);
     return xmlOutput;
   } catch (error) {

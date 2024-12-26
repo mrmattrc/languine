@@ -85,5 +85,7 @@
     <string>Time remaining: %1$@ (%2$lld seconds)</string>
     <key>version_info</key>
     <string>Version %1$@ (Build %2$@)</string>
+    <key>test</key>
+    <string>Test</string>
 </dict>
 </plist>

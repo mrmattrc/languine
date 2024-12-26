@@ -16,6 +16,7 @@ const EMPTY_STRINGSDICT = [
 function parseStringsdictFile(fileContent: string) {
   try {
     const parsedData = plist.parse(fileContent || EMPTY_STRINGSDICT);
+
     if (typeof parsedData !== "object" || parsedData === null) {
       throw new Error("Invalid .stringsdict format");
     }

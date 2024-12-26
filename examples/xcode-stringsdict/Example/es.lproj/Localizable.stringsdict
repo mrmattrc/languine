@@ -85,5 +85,7 @@
     <string>Tiempo restante: %1$@ (%2$lld segundos)</string>
     <key>version_info</key>
     <string>Versión %1$@ (Construcción %2$@)</string>
+    <key>test</key>
+    <string>Prueba</string>
   </dict>
 </plist>

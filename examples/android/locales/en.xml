@@ -63,4 +63,6 @@
         <item quantity="one">%d achievement unlocked</item>
         <item quantity="other">%d achievements unlocked</item>
     </plurals>
+
+    <string name="welcome_message">Welcome to our application!</string>
 </resources>

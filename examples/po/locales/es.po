@@ -4,4 +4,4 @@ msgid "welcome_message"
 msgstr "Bienvenido a nuestra aplicación!"
 
 msgid "error_message"
-msgstr "Ocurrió un error: {error_code}"
+msgstr "Se produjo un error: {error_code}"
